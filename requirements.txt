@@ -1,0 +1,51 @@
+# Flask and Web Framework
+Flask
+flask-cors
+Werkzeug
+gunicorn
+
+# LangGraph and AI Orchestration
+langgraph
+langchain
+langchain-core
+
+# Machine Learning and Vision
+torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+transformers
+Pillow
+accelerate
+bitsandbytes
+peft 
+
+# Vector Database
+pymilvus
+sentence-transformers
+
+# Data Processing
+numpy
+pandas
+
+# API and Validation
+pydantic
+pydantic-core
+python-dotenv
+
+# Utilities
+requests
+regex
+
+# Development
+pytest
+black
+flake8
+
+# Optional: For GPU support
+# If using CPU only, comment out bitsandbytes above
+# nvidia-ml-py
+
+# Production
+python-json-logger
+
+# NOTE: This will install the latest compatible versions
+# If you need specific versions, see requirements_fixed.txt
+# For CPU-only, see requirements_cpu.txt

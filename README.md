@@ -34,7 +34,7 @@ Core Care is an AI-powered platform that combines computer vision and natural la
 ## ✨ Features
 
 ### 🤖 AI-Powered Analysis
-- Fine-tuned Qwen2.5-VL model with LoRA adapters
+- Fine-tuned Qwen3-VL model with LoRA adapters
 - Support for both image-based and text-only queries
 - Real-time inference with GPU acceleration
 - Persistent model loading for fast response times
@@ -59,7 +59,7 @@ Core Care is an AI-powered platform that combines computer vision and natural la
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                     Client Layer                        │
-│  (Web UI / Mobile App / API Clients)                   │
+│            (Mobile App / API Clients)                   │
 └──────────────────┬──────────────────────────────────────┘
                    │
                    ▼

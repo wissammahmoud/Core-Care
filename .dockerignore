@@ -1,0 +1,165 @@
+# ============================================
+# CORE CARE - Docker Ignore File
+# ============================================
+# Prevents copying unnecessary files to Docker image
+# Reduces build time and image size
+# ============================================
+
+# ============================================
+# GIT & VERSION CONTROL
+# ============================================
+.git/
+.gitignore
+.gitattributes
+*.git
+
+# ============================================
+# PYTHON
+# ============================================
+
+# Virtual environments
+venv/
+env/
+ENV/
+CoreCareVenv/
+.venv/
+.env.local
+
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ============================================
+# MODEL CACHE & LARGE FILES
+# ============================================
+# Models will be downloaded inside container or mounted
+
+# Hugging Face cache
+.cache/
+cache/
+huggingface/
+transformers_cache/
+
+# Model files (download inside container)
+models/
+*.bin
+*.safetensors
+*.onnx
+*.h5
+
+# Checkpoints
+checkpoints/
+saved_models/
+
+# Large datasets
+data/raw/
+data/processed/
+datasets/
+
+# ============================================
+# LOGS & TEMP FILES
+# ============================================
+logs/
+*.log
+log/
+temp/
+tmp/
+uploads/
+*.tmp
+
+# ============================================
+# DATABASE
+# ============================================
+milvus_data/
+*.db
+*.sqlite
+vector_db/
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ============================================
+# DOCKER
+# ============================================
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# ============================================
+# DOCUMENTATION
+# ============================================
+# Keep only essential docs, exclude setup guides
+GITHUB_SETUP_GUIDE.md
+GIT_COMMANDS_QUICK_REFERENCE.md
+MASTER_GITHUB_SETUP_SUMMARY.md
+LORA_INTEGRATION_GUIDE.md
+UNIFIED_LORA_SETUP.md
+*.backup
+*.old
+
+# ============================================
+# ENVIRONMENT & SECRETS
+# ============================================
+# Never include actual .env in image!
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+
+# Include .env.example for reference
+!.env.example
+
+# ============================================
+# CI/CD
+# ============================================
+.github/
+.gitlab-ci.yml
+.travis.yml
+azure-pipelines.yml
+
+# ============================================
+# TESTING
+# ============================================
+tests/__pycache__/
+.pytest_cache/
+test_results/
+
+# ============================================
+# OS-SPECIFIC
+# ============================================
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ============================================
+# NOTES
+# ============================================
+# Files NOT ignored (will be copied):
+# - app/ (application code)
+# - requirements.txt
+# - run.py
+# - .env.example
+# - README.md (optional)
+# ============================================

@@ -179,45 +179,7 @@ The application will be available at `http://localhost:5000`
 
 ## ⚙️ Configuration
 
-Create a `.env` file in the root directory:
-
-```bash
-# Flask Configuration
-FLASK_ENV=development
-FLASK_DEBUG=True
-SECRET_KEY=your-secret-key-here
-
-# Server
-HOST=0.0.0.0
-PORT=5000
-
-# Model Configuration
-MODEL_ID=unsloth/Qwen3-VL-4B-Instruct-bnb-4bit
-LORA_ADAPTER_ID=WissMah/Qwen2.5VL-FT-Lora_mix_aug1
-
-# Model Settings
-MAX_NEW_TOKENS=256
-MAX_IMAGE_SIZE=448
-
-# Milvus Configuration
-MILVUS_HOST=localhost
-MILVUS_PORT=19530
-MILVUS_COLLECTION=nutrition_ingredients
-
-# Logging
-LOG_LEVEL=INFO
-LOG_FILE=app.log
-
-# Upload Settings
-MAX_UPLOAD_SIZE=10485760  # 10MB
-ALLOWED_EXTENSIONS=jpg,jpeg,png,gif,webp
-```
-
-### Important Notes
-
-⚠️ **Never commit `.env` files to Git!**
-
-The `.env` file contains sensitive information and is already in `.gitignore`.
+Create a `.env` file in the root directory which includes Flask, vector DB, logging, and other configuration parameters.
 
 ## 🚀 Usage
 
@@ -302,7 +264,7 @@ Check API health status.
 
 ### Base Model
 
-**Name**: Qwen2.5-VL-4B-Instruct  
+**Name**: Qwen3-VL-4B-Instruct  
 **Quantization**: 4-bit (BitsAndBytes)  
 **VRAM Usage**: ~2.5 GB  
 **Provider**: Unsloth (optimized version)
@@ -428,16 +390,6 @@ docker run -d \
   -v $(pwd)/.env:/app/.env \
   core-care:latest
 ```
-
-### Production Considerations
-
-- Use **Gunicorn** or **uWSGI** instead of Flask development server
-- Set up **NGINX** as reverse proxy
-- Enable **HTTPS** with SSL certificates
-- Configure **environment variables** securely
-- Set up **monitoring** (Prometheus, Grafana)
-- Implement **logging** (ELK stack)
-- Use **Docker Compose** for multi-container setup
 
 ## 🤝 Contributing
 
